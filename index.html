@@ -19,17 +19,20 @@
   <main>
 
     <div class="movie-body">
-      <h1 class="movie-text">What watch</h1>
-
-      <form name="movieForm" class="movie-text movie-form">
-        <input type="text" class="form-control" id="movieName" name="movieName" placeholder="Entrer le nom d'un film"><br>
-        <input class="btn btn-secondary" value="Submit" onclick="searchMovie()">
-      </form>
+      <h1 class="movie-text mt-5">What watch</h1>
+      <div class="d-flex justify-content-center">
+        <form name="movieForm" class="movie-text mt-5">
+          <input type="text" class="form-control" id="movieName" name="movieName"
+            placeholder="Entrer le nom d'un film"><br>
+          <input class="btn btn-secondary" value="Chercher" onclick="searchMovie()">
+        </form>
+      </div>
 
       <div class="movie-list">
-        <div id="demo" class="row"></div>
+        <div id="demo" class="row gx-5 gy-5"></div>
       </div>
     </div>
+    
   </main>
 </body>
 

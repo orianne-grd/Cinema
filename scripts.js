@@ -3,16 +3,11 @@ const searchURL = "https://api.themoviedb.org/3/search/movie"
 const posterPath = "https://image.tmdb.org/t/p/original"
 const language = "fr-FR";
 
-
 async function searchMovie() {
-  console.log("test")
   var movieName = document.movieForm.movieName.value;
-  console.log(movieName)
   if(movieName) {
     var data = await getData(movieName)
-    console.log(data);
     var list = getMovieList(data.results);
-    console.log(list);  
     displayMovieList(list);
   }
 }
@@ -57,13 +52,13 @@ function displayMovieList(movieList) {
   demo.replaceChildren();
   movieList.forEach(movie => 
     demo.innerHTML += 
-    "<div class='movie-item movie-text col-4'>" +
-      "<div class='movie-img'> <img src=" + movie.poster + "> </div>"  +
+    "<div class='movie-card movie-text col-sm-12 col-md-6 col-lg-4'>" +
+      "<div class='d-flex movie-item'> <div class='movie-img'> <img src=" + movie.poster + "> </div>"  +
       "<div class='movie-elem'>" + 
         "<h3>" + movie.titre + "</h3>" +
-        "<p>" + movie.desc + "</p>" +
-        "<p> Popularité :" + movie.pop + "</p>" +
-      "</div>" +
+        "<p class='movie-desc'>" + movie.desc + "</p>" +
+        "<p> Popularité : " + movie.pop + "</p>" +
+      "</div> </div>" +
     "</div>"
     );
 }
