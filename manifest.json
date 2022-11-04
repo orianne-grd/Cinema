@@ -5,8 +5,7 @@
   "version": "0.1.0",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "display": "browser",
-  "start_url": "/index.html",
+  "display": "standalone",
   "icons": [
     {
       "src": "icon/icon-192x192.png",
